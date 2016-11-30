@@ -1,14 +1,30 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { AppComponent } from './app.component';
+import { routes } from './app.routes';
 
-import { HttpModule }	from '@angular/http';
-import { FormsModule }	from '@angular/forms';
-
-import { AppComponent }  from './components/app.component';
+import { LoginModule } from './login/login.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+	imports: [
+		BrowserModule,
+		HttpModule,
+		RouterModule.forRoot(routes),
+		LoginModule,
+		DashboardModule,
+		SharedModule.forRoot()
+	],
+	declarations: [AppComponent],
+	providers: [
+		[{provide: LocationStrategy, useClass: HashLocationStrategy}]
+	],
+	bootstrap: [AppComponent]
+
 })
+
 export class AppModule { }

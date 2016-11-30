@@ -1,3 +1,10 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 "use strict";
 var ts = require('typescript');
 var evaluator_1 = require('./evaluator');
@@ -183,12 +190,14 @@ var MetadataCollector = (function () {
             switch (node.kind) {
                 case ts.SyntaxKind.ClassDeclaration:
                     var classDeclaration = node;
-                    var className = classDeclaration.name.text;
-                    if (node.flags & ts.NodeFlags.Export) {
-                        locals.define(className, { __symbolic: 'reference', name: className });
-                    }
-                    else {
-                        locals.define(className, errorSym('Reference to non-exported class', node, { className: className }));
+                    if (classDeclaration.name) {
+                        var className = classDeclaration.name.text;
+                        if (node.flags & ts.NodeFlags.Export) {
+                            locals.define(className, { __symbolic: 'reference', name: className });
+                        }
+                        else {
+                            locals.define(className, errorSym('Reference to non-exported class', node, { className: className }));
+                        }
                     }
                     break;
                 case ts.SyntaxKind.FunctionDeclaration:
@@ -196,7 +205,9 @@ var MetadataCollector = (function () {
                         // Report references to this function as an error.
                         var functionDeclaration = node;
                         var nameNode = functionDeclaration.name;
-                        locals.define(nameNode.text, errorSym('Reference to a non-exported function', nameNode, { name: nameNode.text }));
+                        if (nameNode && nameNode.text) {
+                            locals.define(nameNode.text, errorSym('Reference to a non-exported function', nameNode, { name: nameNode.text }));
+                        }
                     }
                     break;
             }
@@ -224,12 +235,14 @@ var MetadataCollector = (function () {
                     break;
                 case ts.SyntaxKind.ClassDeclaration:
                     var classDeclaration = node;
-                    var className = classDeclaration.name.text;
-                    if (node.flags & ts.NodeFlags.Export) {
-                        if (classDeclaration.decorators) {
-                            if (!metadata)
-                                metadata = {};
-                            metadata[className] = classMetadataOf(classDeclaration);
+                    if (classDeclaration.name) {
+                        var className = classDeclaration.name.text;
+                        if (node.flags & ts.NodeFlags.Export) {
+                            if (classDeclaration.decorators) {
+                                if (!metadata)
+                                    metadata = {};
+                                metadata[className] = classMetadataOf(classDeclaration);
+                            }
                         }
                     }
                     // Otherwise don't record metadata for the class.

@@ -29,8 +29,7 @@
     "type": "range"
   },
   "_requiredBy": [
-    "/",
-    "/angular-cli"
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.6.26.tgz",
   "_shasum": "067c13b8b80223a89b62e9dc82680f09762c4636",

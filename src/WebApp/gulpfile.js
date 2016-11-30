@@ -4,7 +4,8 @@ var rimraf = require('rimraf');
 
 var paths = {
     nodeModules: './node_modules/',
-    clientDeps: './wwwroot/lib/'
+    clientDeps: './wwwroot/lib/',
+    webroot: "./wwwroot/"
 };
 
 var clientLibraries = [
@@ -35,3 +36,4 @@ gulp.task('cleanClientDeps',
     function (cb) {
         return rimraf(paths.clientDeps, cb);
     });
+

@@ -1,3 +1,10 @@
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
 "use strict";
 var ts = require('typescript');
 var collector_1 = require('../src/collector');
@@ -524,6 +531,25 @@ describe('Collector', function () {
                 .toThrowError(/Reference to non-exported class/);
         });
     });
+    describe('with invalid input', function () {
+        it('should not throw with a class with no name', function () {
+            var fileName = '/invalid-class.ts';
+            override(fileName, 'export class');
+            var invalidClass = program.getSourceFile(fileName);
+            expect(function () { return collector.getMetadata(invalidClass); }).not.toThrow();
+        });
+        it('should not throw with a function with no name', function () {
+            var fileName = '/invalid-function.ts';
+            override(fileName, 'export function');
+            var invalidFunction = program.getSourceFile(fileName);
+            expect(function () { return collector.getMetadata(invalidFunction); }).not.toThrow();
+        });
+    });
+    function override(fileName, content) {
+        host.overrideFile(fileName, content);
+        host.addFile(fileName);
+        program = service.getProgram();
+    }
 });
 // TODO: Do not use \` in a template literal as it confuses clang-format
 var FILES = {

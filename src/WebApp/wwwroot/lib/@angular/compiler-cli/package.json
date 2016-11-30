@@ -2,7 +2,7 @@
   "_args": [
     [
       "@angular/compiler-cli@2.2.1",
-      "D:\\Programming\\WebApp\\src\\WebApp\\node_modules\\angular-cli"
+      "D:\\Programming\\WebApp\\src\\WebApp\\node_modules\\ng-cli-2"
     ]
   ],
   "_from": "@angular/compiler-cli@2.2.1",
@@ -19,7 +19,9 @@
     "name": "angular"
   },
   "_npmVersion": "3.10.8",
-  "_phantomChildren": {},
+  "_phantomChildren": {
+    "tsickle": "0.1.7"
+  },
   "_requested": {
     "name": "@angular/compiler-cli",
     "raw": "@angular/compiler-cli@2.2.1",
@@ -29,13 +31,13 @@
     "type": "version"
   },
   "_requiredBy": [
-    "/angular-cli"
+    "/ng-cli-2"
   ],
   "_resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-2.2.1.tgz",
   "_shasum": "166469b881d63946cc3e45c47a87d2b6cd902386",
   "_shrinkwrap": null,
   "_spec": "@angular/compiler-cli@2.2.1",
-  "_where": "D:\\Programming\\WebApp\\src\\WebApp\\node_modules\\angular-cli",
+  "_where": "D:\\Programming\\WebApp\\src\\WebApp\\node_modules\\ng-cli-2",
   "bin": {
     "ng-xi18n": "./src/extract_i18n.js",
     "ngc": "./src/main.js"
