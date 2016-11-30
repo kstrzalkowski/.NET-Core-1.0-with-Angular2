@@ -1,5 +1,5 @@
-# Angular2-.NET-Core-1.0
+# .NET Core 1.0 with Angular2 
 
-1.
-2.
-3.
+### Theme: Ani Angular 2 Theme
+
+#### OpenIddict
