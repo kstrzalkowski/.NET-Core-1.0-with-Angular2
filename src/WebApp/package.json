@@ -1,0 +1,41 @@
+{
+  "name": "web-app",
+  "version": "1.0.0",
+  "scripts": {
+    "postinstall": "typings install && gulp copyClientDeps",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "~2.2.0",
+    "@angular/compiler": "~2.2.0",
+    "@angular/core": "~2.2.0",
+    "@angular/forms": "~2.2.0",
+    "@angular/http": "~2.2.0",
+    "@angular/platform-browser": "~2.2.0",
+    "@angular/platform-browser-dynamic": "~2.2.0",
+    "@angular/router": "~3.2.0",
+    "angular-in-memory-web-api" : "0.1.16",
+    "systemjs": "0.19.41",
+    "reflect-metadata": "0.1.8",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.0-beta.12",
+    "zone.js": "^0.6.25",
+    "es6-shim": "0.35.1",
+    "angular2-google-maps": "0.14.0",
+    "ng2-charts": "1.4.0",
+    "angular2-localstorage": "^0.4.0",
+    "angular2-notifications": "0.4.4"
+  },
+  "devDependencies": {
+    "typescript": "2.0.10",
+    "typings": "2.0.0",
+    "gulp": "3.9.1",
+    "merge-stream": "1.0.1",
+    "angular-cli": "1.0.0-beta.21",
+    "ember-cli": "2.10.0",
+    "ember": "1.0.0-pre.2"
+  }
+}
