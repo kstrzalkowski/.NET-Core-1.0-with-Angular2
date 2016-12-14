@@ -17,7 +17,7 @@
     "@angular/platform-browser": "~2.2.0",
     "@angular/platform-browser-dynamic": "~2.2.0",
     "@angular/router": "~3.2.0",
-    "angular-in-memory-web-api" : "0.1.16",
+    "angular-in-memory-web-api": "0.1.16",
     "systemjs": "0.19.41",
     "reflect-metadata": "0.1.8",
     "core-js": "^2.4.1",
@@ -27,7 +27,8 @@
     "angular2-google-maps": "0.14.0",
     "ng2-charts": "1.4.0",
     "angular2-localstorage": "^0.4.0",
-    "angular2-notifications": "0.4.4"
+    "angular2-notifications": "0.4.4",
+    "ng2-file-upload": "1.1.4-2"
   },
   "devDependencies": {
     "typescript": "2.0.10",

@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      "ng2-file-upload@1.1.4-2",
+      "D:\\Programming\\WebApp\\src\\WebApp"
+    ]
+  ],
+  "_from": "ng2-file-upload@1.1.4-2",
+  "_id": "ng2-file-upload@1.1.4-2",
+  "_inCache": true,
+  "_location": "/ng2-file-upload",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/ng2-file-upload-1.1.4-2.tgz_1479395798678_0.9280759636312723"
+  },
+  "_npmUser": {
+    "email": "valorkin@gmail.com",
+    "name": "valorkin"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ng2-file-upload",
+    "raw": "ng2-file-upload@1.1.4-2",
+    "rawSpec": "1.1.4-2",
+    "scope": null,
+    "spec": "1.1.4-2",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng2-file-upload/-/ng2-file-upload-1.1.4-2.tgz",
+  "_shasum": "61d8e74f726eeeb2514136347f220e1fd45059e3",
+  "_shrinkwrap": null,
+  "_spec": "ng2-file-upload@1.1.4-2",
+  "_where": "D:\\Programming\\WebApp\\src\\WebApp",
+  "author": {
+    "email": "vyacheslav.chub@valor-software.com",
+    "name": "Vyacheslav Chub"
+  },
+  "bugs": {
+    "url": "https://github.com/valor-software/ng2-file-upload/issues"
+  },
+  "dependencies": {},
+  "description": "angular2 file upload directives",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "61d8e74f726eeeb2514136347f220e1fd45059e3",
+    "tarball": "https://registry.npmjs.org/ng2-file-upload/-/ng2-file-upload-1.1.4-2.tgz"
+  },
+  "homepage": "https://github.com/valor-software/ng2-file-upload#readme",
+  "installable": true,
+  "keywords": [
+    "angular",
+    "angular-file-upload",
+    "angular2",
+    "angularjs",
+    "bootstrap",
+    "file-upload"
+  ],
+  "license": "MIT",
+  "main": "bundles/ng2-file-upload.umd.js",
+  "maintainers": [
+    {
+      "name": "valorkin",
+      "email": "valorkin@gmail.com"
+    }
+  ],
+  "module": "index.js",
+  "name": "ng2-file-upload",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/valor-software/ng2-file-upload.git"
+  },
+  "scripts": {},
+  "typings": "index.d.ts",
+  "version": "1.1.4-2"
+}

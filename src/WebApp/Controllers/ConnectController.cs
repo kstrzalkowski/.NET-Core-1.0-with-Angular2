@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AspNet.Security.OpenIdConnect.Primitives;
 using Microsoft.AspNetCore.Identity;
@@ -17,7 +14,6 @@ using OpenIddict;
 
 namespace WebApp.Controllers
 {
-
     public class ConnectController : Controller
     {
 
@@ -123,13 +119,11 @@ namespace WebApp.Controllers
                 OpenIddictConstants.Scopes.Roles
             }.Intersect(request.GetScopes());
 
-           // ticket.SetResources("http://localhost:5000/");
+            // ticket.SetResources("http://localhost:5000/");
             ticket.SetScopes(scope);
 
-
-
-               // Grant the offline_access scope to allow OpenIddict to return a refresh token.
-              //  ticket.SetScopes(OpenIdConnectConstants.Scopes.OfflineAccess);
+            // Grant the offline_access scope to allow OpenIddict to return a refresh token.
+             //  ticket.SetScopes(OpenIdConnectConstants.Scopes.OfflineAccess);
 
             // Sign in the user
             return SignIn(ticket.Principal, ticket.Properties, ticket.AuthenticationScheme);

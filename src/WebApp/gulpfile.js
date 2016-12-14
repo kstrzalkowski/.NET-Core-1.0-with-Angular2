@@ -19,7 +19,8 @@ var clientLibraries = [
     'angular2-google-maps',
     'ng2-charts',
     'angular2-localstorage',
-    'angular2-notifications'
+    'angular2-notifications',
+    'ng2-file-upload'
 ];
 
 gulp.task('copyClientDeps',

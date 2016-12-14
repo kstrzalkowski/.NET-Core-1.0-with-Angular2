@@ -31,7 +31,8 @@
             'angular2-google-maps': 'lib:angular2-google-maps',
             'angular2-localstorage': '/node_modules/angular2-localstorage',
             'ng2-charts': 'lib:ng2-charts',
-            'angular2-notifications': 'lib:angular2-notifications'
+            'angular2-notifications': 'lib:angular2-notifications',
+            'ng2-file-upload': 'lib:ng2-file-upload'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -56,6 +57,10 @@
             'angular2-notifications': { 
                 main: 'components.js', 
                 defaultExtension: 'js' 
+            },
+            'ng2-file-upload': {
+                main: 'index.js',
+                defaultExtension: 'js'
             }
         }
     });

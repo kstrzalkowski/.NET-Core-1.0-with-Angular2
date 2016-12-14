@@ -4879,8 +4879,8 @@ pre code {
     cursor: pointer;
     user-select: none;
     border: 1px solid transparent;
-    padding: .375rem 1rem;
-    font-size: .875rem;
+    /*padding: .375rem 1rem;
+    font-size: .875rem;*/
     line-height: 1.5;
     transition: all .2s ease-in-out;
 }

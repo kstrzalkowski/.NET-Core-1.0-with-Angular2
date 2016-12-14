@@ -14,6 +14,7 @@ var router_1 = require('@angular/router');
 var home_module_1 = require('./home/home.module');
 var blankPage_module_1 = require('./blank-page/blankPage.module');
 var bsComponent_module_1 = require('./bs-component/bsComponent.module');
+var upload_module_1 = require('./upload/upload.module');
 var dashboard_component_1 = require('./dashboard.component');
 var index_1 = require('../shared/index');
 var DashboardModule = (function () {
@@ -27,6 +28,7 @@ var DashboardModule = (function () {
                 home_module_1.HomeModule,
                 bsComponent_module_1.BSComponentModule,
                 blankPage_module_1.BlankPageModule,
+                upload_module_1.UploadModule,
             ],
             declarations: [dashboard_component_1.DashboardComponent, index_1.SidebarComponent],
             exports: [dashboard_component_1.DashboardComponent, index_1.SidebarComponent]

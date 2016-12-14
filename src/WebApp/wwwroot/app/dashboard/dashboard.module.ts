@@ -5,10 +5,13 @@ import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { BlankPageModule } from './blank-page/blankPage.module';
 import { BSComponentModule } from './bs-component/bsComponent.module';
+import { UploadModule } from './upload/upload.module';
 
 import { DashboardComponent } from './dashboard.component';
 
 import { SidebarComponent } from '../shared/index';
+import { UploadComponent } from './upload/upload.component';
+
 
 @NgModule({
     imports: [
@@ -17,6 +20,7 @@ import { SidebarComponent } from '../shared/index';
     	HomeModule,
     	BSComponentModule,
         BlankPageModule,
+		UploadModule,
     ],
     declarations: [DashboardComponent, SidebarComponent],
     exports: [DashboardComponent, SidebarComponent]
